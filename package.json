@@ -1,0 +1,15 @@
+{
+  "name": "injecty",
+  "version": "0.0.1",
+  "description": "Simple, decorator based dependency injection for TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "reflect-metadata": "^0.1.10"
+  }
+}
