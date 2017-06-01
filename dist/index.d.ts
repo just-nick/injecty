@@ -1,6 +1,3 @@
-import 'reflect-metadata';
-export declare function Injectable(): (target: Function) => void;
-export declare function Inject(): (target: Function) => void;
-export declare class Injector {
-    static get(target: typeof Function): any;
-}
+export { Inject } from './decorators/inject.decorator';
+export { Injectable } from './decorators/injectable.decorator';
+export { Injector } from './injector';

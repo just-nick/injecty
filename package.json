@@ -1,15 +1,47 @@
 {
-  "name": "injecty",
-  "version": "0.0.1",
-  "description": "Simple, decorator based dependency injection for TypeScript",
-  "main": "dist/index.js",
-  "scripts": {
-    "start": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "reflect-metadata": "^0.1.10"
-  }
+    "name": "auto-injecty",
+    "version": "1.0.0",
+    "description": "Simple, decorator based dependency injection for TypeScript",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "tsc",
+        "test": "mocha --compilers ts:ts-node/register src/**/*.spec.ts",
+        "cover": "nyc npm t"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "reflect-metadata": "^0.1.10"
+    },
+    "devDependencies": {
+        "@types/chai": "^4.0.0",
+        "@types/mocha": "^2.2.41",
+        "chai": "^4.0.1",
+        "istanbul": "^1.1.0-alpha.1",
+        "mocha": "^3.4.2",
+        "nyc": "^11.0.1",
+        "ts-node": "^3.0.4",
+        "typescript": "^2.3.4"
+    },
+    "nyc": {
+        "include": [
+            "src/*.ts",
+            "src/**/*.ts"
+        ],
+        "exclude": [
+            "node_modules",
+            "src/**/*.d.ts",
+            "src/**/*.spec.ts"
+        ],
+        "extension": [
+            ".ts"
+        ],
+        "require": [
+            "ts-node/register"
+        ],
+        "reporter": [
+            "json",
+            "html"
+        ]
+    }
 }
