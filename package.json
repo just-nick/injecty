@@ -1,6 +1,6 @@
 {
     "name": "auto-injecty",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Simple, decorator based dependency injection for TypeScript",
     "main": "dist/index.js",
     "scripts": {
